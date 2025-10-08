@@ -1,12 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading  = React.createElement("h1", {
-    id:"headingId"
-}, "Hello World from React script file");
+// import "./asset/"
 
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img src="./asset/smoking-burger-with-lettuce-3624ld.png"></img>
+      </div>
+      <div className="nav">
+        <ul className="nav-items">
+          <li className="nav-item">Home</li>
+          <li className="nav-item">About Us</li>
+          <li className="nav-item">Contact Us</li>
+          <li className="nav-item">Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-const parentDiv = React.createElement("div", {id: "parentDiv"}, heading);
+const AppLayout = () => {
+  return (
+    <div className="app-layout">
+      <Header />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parentDiv);
+root.render(<AppLayout />);
